@@ -61,10 +61,34 @@ button[0].addEventListener("click", function() {
 // FONCTIONALITE 4
 ///////////////////////
 
-var button2 = document.getElementsByClassName('btn btn-sm btn-outline-secondary'); // element
 
-button2[1].addEventListener("click", function() {
-    var text2 = document.getElementsByClassName("card-text");
-    text2[1].style.color = "##00FF00";
+button[1].addEventListener("click", function() {
+    var text = document.getElementsByClassName("card-text");
 
-});
+        if (text[1].style.color === 'green') {
+            text[1].style.color = '';
+        }
+
+        else {
+            text[1].style.color = "green";
+
+        }
+    });
+
+///////////////////////
+// FONCTIONALITE 5
+///////////////////////
+
+var header = document.getElementsByTagName('header'); // element
+
+header[0].ondblclick = function(){
+    var head = document.getElementsByTagName('link'); // element
+
+    if (head[0].href == 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css') {
+        head[0].href="";
+    }
+
+    else {
+        head[0].href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+    }
+}
