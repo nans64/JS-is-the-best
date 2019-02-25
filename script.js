@@ -1,23 +1,15 @@
 ///////////////////////
 // FONCTIONALITE 1
 ///////////////////////
-// document.addEventListener("click", function(){
-//    document.getElementsByTagName("footer").innerHTML = console.log("Hello World!");
-// });
 
-// Count the number of clicks
-// A FAIRE  "clic numéro x" avec x qui commence à 1 et s'incrémente de +1 à chaque clic.
-// A FAIRE addEventListener("click", function(){ } format
-
-var clicks = 0; // counter
 var a = document.getElementsByTagName('footer'); // element
-a[0].onclick = function(b) { // onclick not onClick
-    console.log(++clicks); // increment it
-}
+var clicks = 0; // counter
 
-a[0].ondblclick = function(){
-    alert(clicks); // double click to know the number of clicks so far
-}
+a[0].addEventListener("click", function() {
+    console.log(++clicks); // increment it
+});
+
+
 
 ///////////////////////
 // FONCTIONALITE 2
